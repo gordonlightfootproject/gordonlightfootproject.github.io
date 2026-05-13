@@ -38,23 +38,28 @@
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
-        <img
-          class="hero__image"
-          src="assets/images/group-MONCA.jpeg"
-          alt="An acoustic ensemble gathered in a warm listening-room performance space."
-        >
-        <div class="hero__shade" aria-hidden="true"></div>
-        <div class="hero__content section-shell reveal">
-          <p class="eyebrow">Live ensemble performance</p>
-          <h1 id="hero-title">The Gordon Lightfoot Project</h1>
-          <p class="hero__quote">"When love is true, there is no truer occupation."</p>
-          <p class="hero__intro">
-            A group of musicians performing songs they deeply love, with care for
-            the writing, the voices, and the room.
-          </p>
-          <div class="hero__actions" aria-label="Primary actions">
-            <a class="button button--primary" href="#featured">Listen in</a>
-            <a class="button button--secondary" href="#contact">Booking inquiries</a>
+        <div class="hero__photo-wrap">
+          <img
+            class="hero__image"
+            src="assets/images/group-MONCA.jpeg"
+            alt="The Gordon Lightfoot Project ensemble standing together in a gallery."
+          >
+          <div class="hero__shade" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero__content section-shell">
+          <p class="eyebrow hero__eyebrow">Live ensemble performance</p>
+          <h1 id="hero-title" class="hero__title">The Gordon Lightfoot Project</h1>
+          <div class="hero__text reveal">
+            <p class="hero__quote">"When love is true, there is no truer occupation."</p>
+            <p class="hero__intro">
+              A group of musicians performing songs they deeply love, with care for
+              the writing, the voices, and the room.
+            </p>
+            <div class="hero__actions" aria-label="Primary actions">
+              <a class="button button--primary" href="#featured">Listen in</a>
+              <a class="button button--secondary" href="#contact">Booking inquiries</a>
+            </div>
           </div>
         </div>
       </section>
@@ -143,16 +148,31 @@
         </div>
       </section>
 
-      <section class="section" id="about" aria-labelledby="about-title">
-        <div class="section-shell text-band reveal">
-          <p class="eyebrow">About the group</p>
-          <h2 id="about-title">Careful interpretations of enduring songs.</h2>
-          <p>
-            The Gordon Lightfoot Project brings together multiple lead voices,
-            acoustic instrumentation, and a shared admiration for Lightfoot's
-            songwriting. The focus is live performance: clear, warm, and rooted
-            in the craft of the songs.
-          </p>
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="section-shell about-layout reveal">
+          <figure class="about-portrait">
+            <img
+              src="assets/images/gordon.jpg"
+              alt="Gordon Lightfoot with acoustic guitar"
+            >
+          </figure>
+
+          <div class="about-copy">
+            <p class="eyebrow">About the group</p>
+            <h2 id="about-title">A tribute to the writing, not an imitation of the man.</h2>
+            <p>
+              Gordon Lightfoot's songs invite close listening: plainspoken
+              images, patient melodies, and stories that seem to widen as they
+              unfold. The Gordon Lightfoot Project approaches that catalog with
+              admiration for the craft and humility about the legacy.
+            </p>
+            <p>
+              The ensemble brings together multiple lead voices and acoustic
+              colors, allowing different songs to pass through different singers.
+              The aim is not to recreate Lightfoot, but to let the songs keep
+              breathing in a live room.
+            </p>
+          </div>
         </div>
       </section>
 
