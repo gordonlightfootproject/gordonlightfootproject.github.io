@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     >
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles/site.css">
   </head>
   <body>
@@ -43,6 +44,8 @@
             class="hero__image"
             src="assets/images/group-MONCA.jpeg"
             alt="The Gordon Lightfoot Project ensemble standing together in a gallery."
+            fetchpriority="high"
+            decoding="async"
           >
           <div class="hero__shade" aria-hidden="true"></div>
         </div>
@@ -154,6 +157,8 @@
             <img
               src="assets/images/gordon.jpg"
               alt="Gordon Lightfoot with acoustic guitar"
+              loading="lazy"
+              decoding="async"
             >
           </figure>
 
@@ -193,6 +198,8 @@
                 class="portrait-image"
                 src="assets/images/tom.jpg"
                 alt="Tom Haber"
+                loading="lazy"
+                decoding="async"
               >
               <div class="profile-card__body">
                 <p class="profile-card__role">Bass</p>
@@ -216,6 +223,7 @@
                     class="soundcloud-player"
                     title="Wreck of the Edmund Fitzgerald on SoundCloud"
                     scrolling="no"
+                    loading="lazy"
                     allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/wreck-of-the-edmund&amp;color=%23a76d3b&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
                   ></iframe>
@@ -227,6 +235,8 @@
                 class="portrait-image"
                 src="assets/images/bruce.jpg"
                 alt="Bruce MacMillan"
+                loading="lazy"
+                decoding="async"
               >
               <div class="profile-card__body">
                 <p class="profile-card__role">Voice, multi-instrumentalist</p>
@@ -251,6 +261,7 @@
                     class="soundcloud-player"
                     title="Sundown on SoundCloud"
                     scrolling="no"
+                    loading="lazy"
                     allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/sundown&amp;color=%23a76d3b&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
                   ></iframe>
@@ -262,6 +273,8 @@
                 class="portrait-image"
                 src="assets/images/john.jpg"
                 alt="John Mahoney"
+                loading="lazy"
+                decoding="async"
               >
               <div class="profile-card__body">
                 <p class="profile-card__role">Voice, piano, guitar</p>
@@ -285,6 +298,7 @@
                     class="soundcloud-player"
                     title="If You Could Read My Mind on SoundCloud"
                     scrolling="no"
+                    loading="lazy"
                     allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/if-you-could-read-my-mind-1&amp;color=%23a76d3b&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
                   ></iframe>
@@ -296,6 +310,8 @@
                 class="portrait-image"
                 src="assets/images/gary.jpg"
                 alt="Gary Woods"
+                loading="lazy"
+                decoding="async"
               >
               <div class="profile-card__body">
                 <p class="profile-card__role">Voice, guitar</p>
@@ -320,6 +336,7 @@
                     class="soundcloud-player"
                     title="Gotta Get Away on SoundCloud"
                     scrolling="no"
+                    loading="lazy"
                     allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/gordon-lightfoot-gotta-get&amp;color=%23a76d3b&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
                   ></iframe>
@@ -331,6 +348,8 @@
                 class="portrait-image"
                 src="assets/images/caroline.jpg"
                 alt="Caroline Fairchild"
+                loading="lazy"
+                decoding="async"
               >
               <div class="profile-card__body">
                 <p class="profile-card__role">Violin</p>
@@ -354,6 +373,7 @@
                     class="soundcloud-player"
                     title="Carefree Highway on SoundCloud"
                     scrolling="no"
+                    loading="lazy"
                     allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/carefree-highway&amp;color=%23a76d3b&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
                   ></iframe>
@@ -365,6 +385,8 @@
                 class="portrait-image"
                 src="assets/images/lafoca.jpg"
                 alt="Joel Quivey"
+                loading="lazy"
+                decoding="async"
               >
               <div class="profile-card__body">
                 <p class="profile-card__role">Violin, viola</p>
@@ -449,7 +471,7 @@
           </div>
           <div class="contact-actions">
             <a class="contact-link" href="mailto:booking@example.com">booking@example.com</a>
-            <button class="copy-button" type="button" data-copy="booking@example.com">
+            <button class="copy-button" type="button" data-copy="booking@example.com" aria-live="polite">
               Copy email
             </button>
           </div>

@@ -143,6 +143,11 @@ button {
   color: #fff7e8;
 }
 
+.site-nav a[aria-current="page"] {
+  opacity: 1;
+  color: #fff7e8;
+}
+
 .hero {
   position: relative;
   padding-bottom: clamp(58px, 8vw, 104px);
@@ -820,6 +825,7 @@ h3 {
 
 .copy-button {
   min-height: 38px;
+  min-width: 96px;
   border: 1px solid rgba(44, 40, 34, 0.2);
   border-radius: var(--radius);
   background: rgba(251, 247, 240, 0.5);
@@ -921,6 +927,7 @@ h3 {
   color: var(--color-soft-ink);
   font-weight: 700;
   text-align: center;
+  overflow-wrap: anywhere;
 }
 
 .stage-diagram__back,

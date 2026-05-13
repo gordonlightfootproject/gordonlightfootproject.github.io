@@ -41,6 +41,7 @@ const renderFeaturedVideo = (option) => {
       <iframe
         src="${embed}"
         title="${title}"
+        loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
       ></iframe>
@@ -73,7 +74,7 @@ if (videoOptions.length) {
 }
 
 document.querySelectorAll("[data-copy]").forEach((button) => {
-  const originalText = button.textContent;
+  const originalText = button.textContent.trim();
 
   button.addEventListener("click", async () => {
     try {
