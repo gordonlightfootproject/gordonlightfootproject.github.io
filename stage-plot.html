@@ -48,38 +48,8 @@
 
       <section class="section">
         <div class="section-shell stage-layout reveal">
-          <div class="stage-diagram" aria-label="Placeholder stage plot">
-            <div class="stage-diagram__back">Backline / shared instruments</div>
-            <div>Caroline / violin</div>
-            <div>Joel / violin, viola</div>
-            <div>John / voice, keys, guitar</div>
-            <div>Tom / bass</div>
-            <div>Bruce / voice, multi-instrumentalist</div>
-            <div>Gary / voice, guitar</div>
-            <div class="stage-diagram__front">Audience</div>
-          </div>
-
-          <div class="tech-list">
-            <article>
-              <h2>Baseline needs</h2>
-              <ul class="plain-list">
-                <li>Vocal microphones for lead and harmony singers</li>
-                <li>DI or mic support for acoustic guitar and bass</li>
-                <li>Keyboard input if piano/organ is used</li>
-                <li>Violin and viola microphone or pickup inputs</li>
-                <li>Monitors appropriate to room size</li>
-              </ul>
-            </article>
-
-            <article>
-              <h2>Notes</h2>
-              <p>
-                The show is intended for seated, listening-focused rooms. Final
-                stage layout, input count, and monitor needs should be confirmed
-                before each performance.
-              </p>
-            </article>
-          </div>
+          <div class="stage-diagram" data-stage-diagram aria-label="Placeholder stage plot"></div>
+          <div class="tech-list" data-stage-tech></div>
         </div>
       </section>
     </main>
@@ -95,6 +65,7 @@
       </div>
     </footer>
 
+    <script src="scripts/content/stage-plot.js"></script>
     <script src="scripts/site.js"></script>
   </body>
 </html>

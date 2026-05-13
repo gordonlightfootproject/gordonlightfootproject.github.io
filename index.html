@@ -72,7 +72,7 @@
           <div class="featured-layout__intro">
             <p class="eyebrow">Featured video</p>
             <h2 id="featured-title">One performance at a time.</h2>
-            <p>
+            <p data-featured-video-intro>
               A curated place for live performance video, built to stay quiet as
               the library grows.
             </p>
@@ -94,91 +94,13 @@
               <p data-video-venue>Venue and date to come.</p>
             </div>
 
-            <div class="performance-selector" aria-label="Select a performance">
-              <button
-                class="performance-selector__item is-active"
-                type="button"
-                data-video-option
-                data-title="Summertime Dream"
-                data-vocalist="Gordon Lightfoot archival stand-in"
-                data-venue="SNL, 1976"
-                data-note="A warm archival performance standing in for future ensemble video."
-                data-embed="https://player.vimeo.com/video/295602696?title=0&amp;byline=0&amp;portrait=0"
-                aria-pressed="true"
-              >
-                <span class="performance-selector__thumb" aria-hidden="true"></span>
-                <span>
-                  <strong>Summertime Dream</strong>
-                  <small>Archival stand-in</small>
-                </span>
-              </button>
-              <button
-                class="performance-selector__item"
-                type="button"
-                data-video-option
-                data-title="Stand-in performance"
-                data-vocalist="Video reference placeholder"
-                data-venue="Vimeo stand-in material"
-                data-note="A temporary video reference until project footage is ready."
-                data-embed="https://player.vimeo.com/video/34445593?title=0&amp;byline=0&amp;portrait=0"
-                aria-pressed="false"
-              >
-                <span class="performance-selector__thumb" aria-hidden="true"></span>
-                <span>
-                  <strong>Stand-in performance</strong>
-                  <small>Video reference</small>
-                </span>
-              </button>
-              <button
-                class="performance-selector__item"
-                type="button"
-                data-video-option
-                data-title="BBC concert excerpt"
-                data-vocalist="Gordon Lightfoot archival stand-in"
-                data-venue="BBC, 1972"
-                data-note="A concert excerpt standing in for future live ensemble footage."
-                data-embed="https://player.vimeo.com/video/60009601?title=0&amp;byline=0&amp;portrait=0"
-                aria-pressed="false"
-              >
-                <span class="performance-selector__thumb" aria-hidden="true"></span>
-                <span>
-                  <strong>BBC concert excerpt</strong>
-                  <small>Archival stand-in</small>
-                </span>
-              </button>
-            </div>
+            <div class="performance-selector" data-video-options aria-label="Select a performance"></div>
           </div>
         </div>
       </section>
 
       <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="section-shell about-layout reveal">
-          <figure class="about-portrait">
-            <img
-              src="assets/images/gordon.jpg"
-              alt="Gordon Lightfoot with acoustic guitar"
-              loading="lazy"
-              decoding="async"
-            >
-          </figure>
-
-          <div class="about-copy">
-            <p class="eyebrow">About the group</p>
-            <h2 id="about-title">A tribute to the writing, not an imitation of the man.</h2>
-            <p>
-              Gordon Lightfoot's songs invite close listening: plainspoken
-              images, patient melodies, and stories that seem to widen as they
-              unfold. The Gordon Lightfoot Project approaches that catalog with
-              admiration for the craft and humility about the legacy.
-            </p>
-            <p>
-              The ensemble brings together multiple lead voices and acoustic
-              colors, allowing different songs to pass through different singers.
-              The aim is not to recreate Lightfoot, but to let the songs keep
-              breathing in a live room.
-            </p>
-          </div>
-        </div>
+        <div class="section-shell about-layout reveal" data-about-content></div>
       </section>
 
       <section class="section section--muted" id="musicians" aria-labelledby="musicians-title">
@@ -192,224 +114,7 @@
             </p>
           </div>
 
-          <div class="profile-grid" aria-label="Musician profiles">
-            <article class="profile-card">
-              <img
-                class="portrait-image"
-                src="assets/images/tom.jpg"
-                alt="Tom Haber"
-                loading="lazy"
-                decoding="async"
-              >
-              <div class="profile-card__body">
-                <p class="profile-card__role">Bass</p>
-                <h3>Tom Haber</h3>
-                <p>
-                  Bassist Tom Haber has played in local bands for the past 50
-                  years, covering multiple genres of music.
-                </p>
-                <p class="reflection">
-                  <span>Musical connection</span>
-                  A steady presence for songs that need warmth, patience, and
-                  forward motion.
-                </p>
-                <div class="audio-teaser" aria-label="Featured audio placeholder">
-                  <span class="audio-teaser__icon" aria-hidden="true"></span>
-                  <div>
-                    <strong>Wreck of the Edmund Fitzgerald</strong>
-                    <small>SoundCloud stand-in</small>
-                  </div>
-                  <iframe
-                    class="soundcloud-player"
-                    title="Wreck of the Edmund Fitzgerald on SoundCloud"
-                    scrolling="no"
-                    loading="lazy"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/wreck-of-the-edmund&amp;color=%23a76d3b&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
-                  ></iframe>
-                </div>
-              </div>
-            </article>
-            <article class="profile-card">
-              <img
-                class="portrait-image"
-                src="assets/images/bruce.jpg"
-                alt="Bruce MacMillan"
-                loading="lazy"
-                decoding="async"
-              >
-              <div class="profile-card__body">
-                <p class="profile-card__role">Voice, multi-instrumentalist</p>
-                <h3>Bruce MacMillan</h3>
-                <p>
-                  Bruce MacMillan owns Chico's iconic Music Connection, which
-                  sells instruments and offers lessons for learners of all ages
-                  and levels.
-                </p>
-                <p class="reflection">
-                  <span>Musical connection</span>
-                  A vocalist and multi-instrumentalist, Bruce performs with many
-                  local bands, including the Rattlesnakes.
-                </p>
-                <div class="audio-teaser" aria-label="Featured audio placeholder">
-                  <span class="audio-teaser__icon" aria-hidden="true"></span>
-                  <div>
-                    <strong>Sundown</strong>
-                    <small>SoundCloud stand-in</small>
-                  </div>
-                  <iframe
-                    class="soundcloud-player"
-                    title="Sundown on SoundCloud"
-                    scrolling="no"
-                    loading="lazy"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/sundown&amp;color=%23a76d3b&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
-                  ></iframe>
-                </div>
-              </div>
-            </article>
-            <article class="profile-card">
-              <img
-                class="portrait-image"
-                src="assets/images/john.jpg"
-                alt="John Mahoney"
-                loading="lazy"
-                decoding="async"
-              >
-              <div class="profile-card__body">
-                <p class="profile-card__role">Voice, piano, guitar</p>
-                <h3>John Mahoney</h3>
-                <p>
-                  John Mahoney is a vocalist, pianist, and guitarist. He spent
-                  his career in biomedical research and teaching.
-                </p>
-                <p class="reflection">
-                  <span>Musical connection</span>
-                  Brings a careful ear for lyric, harmony, and the quiet turns
-                  that make the songs feel lived in.
-                </p>
-                <div class="audio-teaser" aria-label="Featured audio placeholder">
-                  <span class="audio-teaser__icon" aria-hidden="true"></span>
-                  <div>
-                    <strong>If You Could Read My Mind</strong>
-                    <small>SoundCloud stand-in</small>
-                  </div>
-                  <iframe
-                    class="soundcloud-player"
-                    title="If You Could Read My Mind on SoundCloud"
-                    scrolling="no"
-                    loading="lazy"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/if-you-could-read-my-mind-1&amp;color=%23a76d3b&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
-                  ></iframe>
-                </div>
-              </div>
-            </article>
-            <article class="profile-card">
-              <img
-                class="portrait-image"
-                src="assets/images/gary.jpg"
-                alt="Gary Woods"
-                loading="lazy"
-                decoding="async"
-              >
-              <div class="profile-card__body">
-                <p class="profile-card__role">Voice, guitar</p>
-                <h3>Gary Woods</h3>
-                <p>
-                  Gary Woods is a vocalist and guitarist, as well as a former
-                  filmmaker. He plays locally with Tom Haber in Los Caballitos
-                  de la Cancion.
-                </p>
-                <p class="reflection">
-                  <span>Musical connection</span>
-                  Gary also performs around Chico as a jazz guitarist and
-                  vocalist.
-                </p>
-                <div class="audio-teaser" aria-label="Featured audio placeholder">
-                  <span class="audio-teaser__icon" aria-hidden="true"></span>
-                  <div>
-                    <strong>Gotta Get Away</strong>
-                    <small>SoundCloud stand-in</small>
-                  </div>
-                  <iframe
-                    class="soundcloud-player"
-                    title="Gotta Get Away on SoundCloud"
-                    scrolling="no"
-                    loading="lazy"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/gordon-lightfoot-gotta-get&amp;color=%23a76d3b&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
-                  ></iframe>
-                </div>
-              </div>
-            </article>
-            <article class="profile-card">
-              <img
-                class="portrait-image"
-                src="assets/images/caroline.jpg"
-                alt="Caroline Fairchild"
-                loading="lazy"
-                decoding="async"
-              >
-              <div class="profile-card__body">
-                <p class="profile-card__role">Violin</p>
-                <h3>Caroline Fairchild</h3>
-                <p>
-                  Caroline Fairchild plays violin, adding a bowed voice to the
-                  ensemble's acoustic arrangements.
-                </p>
-                <p class="reflection">
-                  <span>Musical connection</span>
-                  Her lines can carry melody, texture, and atmosphere without
-                  crowding the song.
-                </p>
-                <div class="audio-teaser" aria-label="Featured audio placeholder">
-                  <span class="audio-teaser__icon" aria-hidden="true"></span>
-                  <div>
-                    <strong>Carefree Highway</strong>
-                    <small>SoundCloud stand-in</small>
-                  </div>
-                  <iframe
-                    class="soundcloud-player"
-                    title="Carefree Highway on SoundCloud"
-                    scrolling="no"
-                    loading="lazy"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/carefree-highway&amp;color=%23a76d3b&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
-                  ></iframe>
-                </div>
-              </div>
-            </article>
-            <article class="profile-card">
-              <img
-                class="portrait-image"
-                src="assets/images/lafoca.jpg"
-                alt="Joel Quivey"
-                loading="lazy"
-                decoding="async"
-              >
-              <div class="profile-card__body">
-                <p class="profile-card__role">Violin, viola</p>
-                <h3>Joel Quivey</h3>
-                <p>
-                  Joel Quivey plays violin and viola, extending the ensemble's
-                  string colors with both brightness and depth.
-                </p>
-                <p class="reflection">
-                  <span>Musical connection</span>
-                  The violin and viola parts leave space for the voices while
-                  drawing out the songs' emotional grain.
-                </p>
-                <div class="audio-teaser audio-teaser--empty" aria-label="Featured audio placeholder">
-                  <span class="audio-teaser__icon" aria-hidden="true"></span>
-                  <div>
-                    <strong>Featured song to come</strong>
-                    <small>Audio stand-in pending</small>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
+          <div class="profile-grid" data-musicians aria-label="Musician profiles"></div>
         </div>
       </section>
 
@@ -423,39 +128,7 @@
               pretending this needs a heavy calendar system.
             </p>
           </div>
-          <div class="performance-list" aria-label="Upcoming and recent performances">
-            <article class="performance-item">
-              <time datetime="2026">Upcoming</time>
-              <div>
-                <h3>New dates to be announced</h3>
-                <p>Concert and listening-room details will appear here.</p>
-              </div>
-            </article>
-            <article class="performance-item">
-              <time datetime="2026-05-09T19:30">May 9, 2026</time>
-              <div>
-                <h3>Gordon Lightfoot Tribute Concert at monca</h3>
-                <p>
-                  A 7:30 PM benefit concert in the monca gallery space in Chico,
-                  California. The show raised several thousand dollars for monca
-                  and supported future arts and culture experiences for the
-                  community.
-                </p>
-                <p class="performance-note">
-                  The musicians began playing together through the Townsend House
-                  Jam Band and have continued performing there most Friday
-                  mornings.
-                </p>
-              </div>
-            </article>
-            <article class="performance-item performance-item--booking">
-              <time datetime="2026">Booking</time>
-              <div>
-                <h3>Available for curated concerts</h3>
-                <p>Listening rooms, arts presenters, and intimate concert spaces.</p>
-              </div>
-            </article>
-          </div>
+          <div class="performance-list" data-performances aria-label="Upcoming and recent performances"></div>
         </div>
       </section>
 
@@ -470,8 +143,8 @@
             </p>
           </div>
           <div class="contact-actions">
-            <a class="contact-link" href="mailto:booking@example.com">booking@example.com</a>
-            <button class="copy-button" type="button" data-copy="booking@example.com" aria-live="polite">
+            <a class="contact-link" href="mailto:booking@example.com" data-booking-email>booking@example.com</a>
+            <button class="copy-button" type="button" data-copy="booking@example.com" data-booking-copy aria-live="polite">
               Copy email
             </button>
           </div>
@@ -490,6 +163,10 @@
       </div>
     </footer>
 
+    <script src="scripts/content/site-content.js"></script>
+    <script src="scripts/content/videos.js"></script>
+    <script src="scripts/content/musicians.js"></script>
+    <script src="scripts/content/performances.js"></script>
     <script src="scripts/site.js"></script>
   </body>
 </html>
