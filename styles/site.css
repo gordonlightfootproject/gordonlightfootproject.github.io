@@ -100,6 +100,14 @@ button {
   pointer-events: none;
 }
 
+.site-header--solid {
+  background: rgba(44, 40, 34, 0.96);
+}
+
+.site-header--solid::before {
+  display: none;
+}
+
 .brand-mark {
   display: inline-flex;
   align-items: center;
@@ -666,11 +674,32 @@ h3 {
   color: var(--color-soft-ink);
 }
 
+.performance-note {
+  border-top: 1px solid rgba(44, 40, 34, 0.12);
+  padding-top: 10px;
+}
+
+.performance-item--booking {
+  background: #f4eadc;
+}
+
 .contact-panel {
   display: flex;
   align-items: end;
   justify-content: space-between;
   gap: 28px;
+}
+
+.contact-panel p:last-child {
+  max-width: 580px;
+  margin: 20px 0 0;
+  color: var(--color-soft-ink);
+}
+
+.contact-actions {
+  display: grid;
+  justify-items: end;
+  gap: 12px;
 }
 
 .contact-link {
@@ -684,6 +713,126 @@ h3 {
 
 .contact-link:hover {
   color: var(--color-brass);
+}
+
+.copy-button {
+  min-height: 38px;
+  border: 1px solid rgba(44, 40, 34, 0.2);
+  border-radius: var(--radius);
+  background: rgba(251, 247, 240, 0.5);
+  color: var(--color-ink);
+  padding: 8px 13px;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  border-color: rgba(44, 40, 34, 0.36);
+  background: rgba(251, 247, 240, 0.82);
+  transform: translateY(-1px);
+}
+
+.copy-button--dark {
+  background: rgba(44, 40, 34, 0.08);
+}
+
+.subpage {
+  padding-top: 92px;
+}
+
+.page-hero {
+  padding: clamp(76px, 10vw, 128px) 0 clamp(32px, 5vw, 58px);
+}
+
+.page-hero h1 {
+  max-width: 900px;
+  color: var(--color-ink);
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+}
+
+.page-hero p:last-child {
+  max-width: 700px;
+  margin: 24px 0 0;
+  color: var(--color-soft-ink);
+  font-size: 1.1rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.info-card {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-panel);
+  padding: clamp(20px, 3vw, 30px);
+}
+
+.info-card h2,
+.tech-list h2 {
+  font-size: clamp(1.35rem, 2vw, 2rem);
+}
+
+.info-card p,
+.tech-list p {
+  color: var(--color-soft-ink);
+}
+
+.plain-list {
+  margin: 18px 0 0;
+  padding-left: 1.1rem;
+  color: var(--color-soft-ink);
+}
+
+.plain-list li + li {
+  margin-top: 8px;
+}
+
+.stage-layout {
+  display: grid;
+  grid-template-columns: minmax(360px, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(32px, 6vw, 76px);
+  align-items: start;
+}
+
+.stage-diagram {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-panel);
+  padding: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.stage-diagram > div {
+  min-height: 82px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(44, 40, 34, 0.12);
+  border-radius: calc(var(--radius) - 2px);
+  background: rgba(245, 240, 232, 0.72);
+  padding: 12px;
+  color: var(--color-soft-ink);
+  font-weight: 700;
+  text-align: center;
+}
+
+.stage-diagram__back,
+.stage-diagram__front {
+  grid-column: 1 / -1;
+}
+
+.stage-diagram__front {
+  background: rgba(167, 109, 59, 0.12) !important;
+  color: var(--color-brass) !important;
+}
+
+.tech-list {
+  display: grid;
+  gap: 28px;
 }
 
 .site-footer {
@@ -701,6 +850,14 @@ h3 {
 
 .site-footer p {
   margin: 0;
+}
+
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #fffaf0;
 }
 
 .reveal {
@@ -748,9 +905,14 @@ h3 {
 
   .section-grid,
   .featured-layout,
+  .stage-layout,
   .contact-panel {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .contact-actions {
+    justify-items: start;
   }
 
   .featured-layout__intro {
@@ -763,6 +925,10 @@ h3 {
 
   .profile-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
   }
 
   .profile-card {
@@ -801,6 +967,10 @@ h3 {
     display: grid;
   }
 
+  .subpage {
+    padding-top: 136px;
+  }
+
   .hero__content {
     padding-top: 190px;
   }
@@ -821,6 +991,15 @@ h3 {
 
   .performance-selector__item {
     grid-template-columns: 86px 1fr;
+  }
+
+  .stage-diagram {
+    grid-template-columns: 1fr;
+  }
+
+  .stage-diagram__back,
+  .stage-diagram__front {
+    grid-column: auto;
   }
 
   .profile-grid,

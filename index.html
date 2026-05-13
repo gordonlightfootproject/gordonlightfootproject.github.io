@@ -20,7 +20,7 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" aria-label="Site header">
-      <a class="brand-mark" href="#" aria-label="The Gordon Lightfoot Project home">
+      <a class="brand-mark" href="index.html" aria-label="The Gordon Lightfoot Project home">
         <span class="brand-mark__line"></span>
         <span>The Gordon Lightfoot Project</span>
       </a>
@@ -30,6 +30,8 @@
         <a href="#about">About</a>
         <a href="#musicians">Musicians</a>
         <a href="#performances">Performances</a>
+        <a href="epk.html">EPK</a>
+        <a href="stage-plot.html">Stage Plot</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -374,20 +376,41 @@
           <div>
             <p class="eyebrow">Upcoming & recent</p>
             <h2 id="performances-title">A modest performance list.</h2>
+            <p>
+              A simple structure for dates as they are confirmed, without
+              pretending this needs a heavy calendar system.
+            </p>
           </div>
-          <div class="performance-list" aria-label="Performance placeholders">
+          <div class="performance-list" aria-label="Upcoming and recent performances">
             <article class="performance-item">
-              <time datetime="2026">Date to be announced</time>
+              <time datetime="2026">Upcoming</time>
               <div>
-                <h3>Venue name</h3>
-                <p>City, state</p>
+                <h3>New dates to be announced</h3>
+                <p>Concert and listening-room details will appear here.</p>
               </div>
             </article>
             <article class="performance-item">
-              <time datetime="2026">Recent performance</time>
+              <time datetime="2026-05-09T19:30">May 9, 2026</time>
               <div>
-                <h3>Listening room</h3>
-                <p>Performance notes to come</p>
+                <h3>Gordon Lightfoot Tribute Concert at monca</h3>
+                <p>
+                  A 7:30 PM benefit concert in the monca gallery space in Chico,
+                  California. The show raised several thousand dollars for monca
+                  and supported future arts and culture experiences for the
+                  community.
+                </p>
+                <p class="performance-note">
+                  The musicians began playing together through the Townsend House
+                  Jam Band and have continued performing there most Friday
+                  mornings.
+                </p>
+              </div>
+            </article>
+            <article class="performance-item performance-item--booking">
+              <time datetime="2026">Booking</time>
+              <div>
+                <h3>Available for curated concerts</h3>
+                <p>Listening rooms, arts presenters, and intimate concert spaces.</p>
               </div>
             </article>
           </div>
@@ -399,8 +422,17 @@
           <div>
             <p class="eyebrow">Booking</p>
             <h2 id="contact-title">For concerts, listening rooms, and arts presenters.</h2>
+            <p>
+              Send date, venue, location, expected audience size, and any
+              technical details already known.
+            </p>
           </div>
-          <a class="contact-link" href="mailto:booking@example.com">booking@example.com</a>
+          <div class="contact-actions">
+            <a class="contact-link" href="mailto:booking@example.com">booking@example.com</a>
+            <button class="copy-button" type="button" data-copy="booking@example.com">
+              Copy email
+            </button>
+          </div>
         </div>
       </section>
     </main>
@@ -408,7 +440,11 @@
     <footer class="site-footer">
       <div class="section-shell">
         <p>The Gordon Lightfoot Project</p>
-        <p>Thoughtful ensemble performances of songs that continue to travel.</p>
+        <p>
+          <a href="epk.html">EPK</a>
+          <span aria-hidden="true">/</span>
+          <a href="stage-plot.html">Stage Plot</a>
+        </p>
       </div>
     </footer>
 
