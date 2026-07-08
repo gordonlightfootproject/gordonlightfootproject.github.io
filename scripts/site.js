@@ -25,39 +25,8 @@ const renderSiteSettings = () => {
   });
 };
 
-const renderAbout = () => {
-  const target = document.querySelector("[data-about-content]");
-  const about = content.site?.about;
-
-  if (!target || !about) {
-    return;
-  }
-
-  target.innerHTML = `
-    <figure class="about-portrait">
-      <img
-        src="${escapeHtml(about.image)}"
-        alt="${escapeHtml(about.imageAlt)}"
-        loading="lazy"
-        decoding="async"
-      >
-    </figure>
-
-    <div class="about-copy">
-      <p class="eyebrow">${escapeHtml(about.eyebrow)}</p>
-      <h2 id="about-title">${escapeHtml(about.title)}</h2>
-      ${about.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
-    </div>
-  `;
-};
-
 const renderVideos = () => {
-  const intro = document.querySelector("[data-featured-video-intro]");
   const target = document.querySelector("[data-video-options]");
-
-  if (intro && content.site?.featuredVideoIntro) {
-    intro.textContent = content.site.featuredVideoIntro;
-  }
 
   if (!target || !content.videos?.length) {
     return;
@@ -76,9 +45,16 @@ const renderVideos = () => {
           data-date="${escapeHtml(video.date)}"
           data-note="${escapeHtml(video.note)}"
           data-embed="${escapeHtml(video.embed)}"
+          data-poster="${escapeHtml(video.poster)}"
           aria-pressed="${index === 0 ? "true" : "false"}"
         >
-          <span class="performance-selector__thumb" aria-hidden="true"></span>
+          <span class="performance-selector__thumb" aria-hidden="true">
+            ${
+              video.poster
+                ? `<img src="${escapeHtml(video.poster)}" alt="" loading="lazy" decoding="async">`
+                : ""
+            }
+          </span>
           <span>
             <strong>${escapeHtml(video.title)}</strong>
             <small>${escapeHtml(video.date)}</small>
@@ -150,20 +126,68 @@ const renderPerformances = () => {
     return;
   }
 
-  target.innerHTML = content.performances
-    .map(
-      (performance) => `
-        <article class="performance-item${performance.featured ? " performance-item--booking" : ""}">
-          <time datetime="${escapeHtml(performance.datetime)}">${escapeHtml(performance.label)}</time>
-          <div>
-            <h3>${escapeHtml(performance.title)}</h3>
-            <p>${escapeHtml(performance.body)}</p>
-            ${performance.note ? `<p class="performance-note">${escapeHtml(performance.note)}</p>` : ""}
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const parsePerformanceDate = (date) => {
+    const parsed = new Date(`${date} 00:00:00`);
+    parsed.setHours(0, 0, 0, 0);
+    return parsed;
+  };
+
+  const performances = content.performances
+    .map((performance) => ({
+      ...performance,
+      dateValue: parsePerformanceDate(performance.date)
+    }))
+    .filter((performance) => !Number.isNaN(performance.dateValue.getTime()));
+
+  const upcoming = performances
+    .filter((performance) => performance.dateValue >= today)
+    .sort((a, b) => a.dateValue - b.dateValue);
+  const previous = performances
+    .filter((performance) => performance.dateValue < today)
+    .sort((a, b) => b.dateValue - a.dateValue);
+
+  const renderPerformance = (performance, group) => `
+    <article class="performance-item performance-item--${group}">
+      <span class="performance-date">${escapeHtml(performance.date)}</span>
+      <div>
+        <h3>${escapeHtml(performance.venue)}</h3>
+        ${group === "upcoming" && performance.startTime ? `<p>${escapeHtml(performance.startTime)}</p>` : ""}
+        ${performance.note ? `<p class="performance-note">${escapeHtml(performance.note)}</p>` : ""}
+        ${
+          group === "upcoming" && performance.link
+            ? `<p><a href="${escapeHtml(performance.link.href)}">${escapeHtml(performance.link.label)}</a></p>`
+            : ""
+        }
+      </div>
+    </article>
+  `;
+
+  target.innerHTML = `
+    <div class="performance-group-heading">Upcoming</div>
+    ${
+      upcoming.length
+        ? upcoming.map((performance) => renderPerformance(performance, "upcoming")).join("")
+        : `<article class="performance-item performance-item--upcoming performance-item--empty">
+            <span class="performance-date">Soon</span>
+            <div>
+              <h3>New dates to be announced</h3>
+              <p>Concert and listening-room details will appear here.</p>
+            </div>
+          </article>`
+    }
+    ${
+      previous.length
+        ? `<div class="performance-group-heading performance-group-heading--previous">
+            <span aria-hidden="true"></span>
+            Previous
           </div>
-        </article>
-      `
-    )
-    .join("");
+          ${previous.map((performance) => renderPerformance(performance, "previous")).join("")}`
+        : ""
+    }
+  `;
 };
 
 const renderEpkCards = () => {
@@ -236,7 +260,6 @@ const renderStagePlot = () => {
 
 const renderContent = () => {
   renderSiteSettings();
-  renderAbout();
   renderVideos();
   renderMusicians();
   renderPerformances();
@@ -274,12 +297,31 @@ const initFeaturedVideo = () => {
   const videoDate = document.querySelector("[data-video-date]");
   const videoOptions = document.querySelectorAll("[data-video-option]");
 
+  const autoplayEmbed = (embed) => {
+    const url = new URL(embed, window.location.href);
+    url.searchParams.set("autoplay", "1");
+    url.searchParams.set("playsinline", "1");
+    return url.toString();
+  };
+
+  const renderVideoFrame = ({ embed, title }) => {
+    videoPlayer.innerHTML = `
+      <iframe
+        src="${escapeHtml(autoplayEmbed(embed))}"
+        title="${escapeHtml(title)}"
+        loading="lazy"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    `;
+  };
+
   const renderFeaturedVideo = (option) => {
     if (!videoPlayer || !videoTitle || !videoVocalist || !videoVenue || !videoDate) {
       return;
     }
 
-    const { title, vocalist, venue, date, note, embed } = option.dataset;
+    const { title, vocalist, venue, date, note, embed, poster } = option.dataset;
 
     videoTitle.textContent = title;
     videoVocalist.textContent = vocalist;
@@ -288,14 +330,25 @@ const initFeaturedVideo = () => {
 
     if (embed) {
       videoPlayer.innerHTML = `
-        <iframe
-          src="${escapeHtml(embed)}"
-          title="${escapeHtml(title)}"
-          loading="lazy"
-          allow="autoplay; encrypted-media; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <button class="featured-player__poster" type="button" aria-label="Play ${escapeHtml(title)}">
+          ${
+            poster
+              ? `<img src="${escapeHtml(poster)}" alt="" loading="eager" decoding="async">`
+              : ""
+          }
+          <span class="featured-player__poster-shade" aria-hidden="true"></span>
+          <span class="featured-player__pick" aria-hidden="true">
+            <svg viewBox="0 0 100 100" focusable="false">
+              <path d="M 0,50 C 0,44 2,7.1 27,7.1 52,7.1 100,42.3 100,50 100,57.7 52,92.9 27,92.9 2,92.9 0,56 0,50 Z"></path>
+            </svg>
+          </span>
+        </button>
       `;
+
+      const posterButton = videoPlayer.querySelector(".featured-player__poster");
+      posterButton?.addEventListener("click", () => {
+        renderVideoFrame({ embed, title });
+      });
     } else {
       videoPlayer.innerHTML = `
         <div class="featured-player__slate">

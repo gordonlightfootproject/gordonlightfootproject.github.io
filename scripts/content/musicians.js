@@ -7,9 +7,9 @@ window.GLP_CONTENT.musicians = [
     role: "Voice, multi-instrumentalist",
     image: "assets/images/bruce.jpg",
     bio:
-      "Bruce MacMillan owns Chico's iconic Music Connection, which sells instruments and offers lessons for learners of all ages and levels.",
+    "Owner of Chico's Music Connection, Bruce has spent years helping local musicians find instruments, lessons, and each other. He plays in the Rattlesnakes and a number of other bands.",
     reflection:
-      "A vocalist and multi-instrumentalist, Bruce performs with many local bands, including the Rattlesnakes.",
+      "I learned my first GL song, Sundown, 20 years ago and I've been a fan ever since.",
     audio: {
       title: "Sundown",
       label: "SoundCloud stand-in",
@@ -22,9 +22,9 @@ window.GLP_CONTENT.musicians = [
     role: "Voice, piano, guitar",
     image: "assets/images/john.jpg",
     bio:
-      "John Mahoney is a vocalist, pianist, and guitarist. He spent his career in biomedical research and teaching.",
+      "John is known for his many musical sides including as co-leader of the Skyliners (big band) and as frequent solo folk performer. He worked in biomedical research and as a CSUC professor.",
     reflection:
-      "Brings a careful ear for lyric, harmony, and the quiet turns that make the songs feel lived in.",
+      "Gordon's music had a strong influence on my early musical trajectory. His songs felt like poetry for people.",
     audio: {
       title: "If You Could Read My Mind",
       label: "SoundCloud stand-in",
@@ -37,8 +37,8 @@ window.GLP_CONTENT.musicians = [
     role: "Voice, guitar",
     image: "assets/images/gary.jpg",
     bio:
-      "Gary Woods is a vocalist and guitarist, as well as a former filmmaker. He plays locally with Tom Haber in Los Caballitos de la Cancion.",
-    reflection: "Gary also performs around Chico as a jazz guitarist and vocalist.",
+      "A multi-talented artist, Gary is a musician and filmmaker. He plays with Tom Haber in Los Caballitos de la Cancion.",
+    reflection: "I remember seeing GL in person at the Fillmore. I'll never forget his deep presence.",
     audio: {
       title: "Gotta Get Away",
       label: "SoundCloud stand-in",
@@ -51,9 +51,9 @@ window.GLP_CONTENT.musicians = [
     role: "Bass",
     image: "assets/images/tom.jpg",
     bio:
-      "Bassist Tom Haber has played in local bands for the past 50 years, covering multiple genres of music.",
+      "Tom has played in local bands for the past 50 years, exploring multiple genres--latin, rock, and jazz.",
     reflection:
-      "A steady presence for songs that need warmth, patience, and forward motion.",
+      "My all-time favorite GL song is Anything For Love.",
     audio: {
       title: "Wreck of the Edmund Fitzgerald",
       label: "SoundCloud stand-in",
@@ -66,9 +66,9 @@ window.GLP_CONTENT.musicians = [
     role: "Violin",
     image: "assets/images/caroline.jpg",
     bio:
-      "Caroline Fairchild plays violin, adding a bowed voice to the ensemble's acoustic arrangements.",
+      "Principle violinist for the North State Symphony, she brings her bow to the GL Project as well as to the world of bluegrass.",
     reflection:
-      "Her lines can carry melody, texture, and atmosphere without crowding the song.",
+      "I was introduced to GL through my best friend and was immediately impressed with the rich texture of his recordings.",
     audio: {
       title: "Carefree Highway",
       label: "SoundCloud stand-in",
@@ -81,9 +81,9 @@ window.GLP_CONTENT.musicians = [
     role: "Violin, viola",
     image: "assets/images/lafoca.jpg",
     bio:
-      "Joel Quivey plays violin and viola, extending the ensemble's string colors with both brightness and depth.",
+      "Joel is not only an accomplished player, but also a master arranger. ",
     reflection:
-      "The violin and viola parts leave space for the voices while drawing out the songs' emotional grain.",
+      "It's such a pleasure to work with GL's material. I find such inspiration in his unique string harmonies.",
     audio: {
       title: "Featured song to come",
       label: "Audio stand-in pending"

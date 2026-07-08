@@ -3,18 +3,6 @@ window.GLP_CONTENT = window.GLP_CONTENT || {};
 window.GLP_CONTENT.site = {
   // Replace this when the final booking address is known.
   bookingEmail: "booking@example.com",
-  featuredVideoIntro:
-    "A curated place for live performance video, built to stay quiet as the library grows.",
-  about: {
-    eyebrow: "About the group",
-    title: "A tribute to the writing, not an imitation of the man.",
-    image: "assets/images/gordon.jpg",
-    imageAlt: "Gordon Lightfoot with acoustic guitar",
-    paragraphs: [
-      "Gordon Lightfoot's songs invite close listening: plainspoken images, patient melodies, and stories that seem to widen as they unfold. The Gordon Lightfoot Project approaches that catalog with admiration for the craft and humility about the legacy.",
-      "The ensemble brings together multiple lead voices and acoustic colors, allowing different songs to pass through different singers. The aim is not to recreate Lightfoot, but to let the songs keep breathing in a live room."
-    ]
-  },
   epkCards: [
     {
       eyebrow: "Short description",

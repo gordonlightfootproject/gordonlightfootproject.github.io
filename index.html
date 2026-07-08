@@ -15,7 +15,7 @@
       rel="stylesheet"
     >
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="styles/site.css?v=upcoming-brass">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -59,10 +59,6 @@
               A group of musicians performing songs they deeply love, with care for
               the writing, the voices, and the room.
             </p>
-            <div class="hero__actions" aria-label="Primary actions">
-              <a class="button button--primary" href="#featured">Listen in</a>
-              <a class="button button--secondary" href="#contact">Booking inquiries</a>
-            </div>
           </div>
         </div>
       </section>
@@ -70,11 +66,10 @@
       <section class="section section--lead" id="featured" aria-labelledby="featured-title">
         <div class="section-shell featured-layout reveal">
           <div class="featured-layout__intro">
-            <p class="eyebrow">Featured video</p>
-            <h2 id="featured-title">One performance at a time.</h2>
-            <p data-featured-video-intro>
-              A curated place for live performance video, built to stay quiet as
-              the library grows.
+            <p class="eyebrow">Featured videos</p>
+            <h2 id="featured-title">Each song tells a story.</h2>
+            <p>
+              Selected live performances featuring different voices from the ensemble.
             </p>
           </div>
 
@@ -103,7 +98,30 @@
       </section>
 
       <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="section-shell about-layout reveal" data-about-content></div>
+        <div class="section-shell about-layout reveal">
+          <figure class="about-portrait">
+            <img
+              src="assets/images/gordon.jpg"
+              alt="Gordon Lightfoot with acoustic guitar"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+
+          <div class="about-copy">
+            <p class="eyebrow">About the group</p>
+            <h2 id="about-title">Songs that have traveled far.</h2>
+            <p>
+              Gordon Lightfoot's songs invite close listening: plainspoken images,
+              patient melodies, and stories that widen as they unfold. The
+              Gordon Lightfoot Project approaches his writing with admiration, affection, and respect.
+            </p>
+            <p>
+              With multiple lead voices and diverse instrumentation, songs come forward in unique ways.
+              The hope is to let these timeless songs breathe in a live room.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section class="section section--muted" id="musicians" aria-labelledby="musicians-title">
@@ -125,10 +143,9 @@
         <div class="section-shell section-grid reveal">
           <div>
             <p class="eyebrow">Upcoming & recent</p>
-            <h2 id="performances-title">A modest performance list.</h2>
+            <h2 id="performances-title">Experience the music live.</h2>
             <p>
-              A simple structure for dates as they are confirmed, without
-              pretending this needs a heavy calendar system.
+              The ensemble performs at auditoriums, galleries, community spaces, private celebrations, and anywhere music is appreciated.
             </p>
           </div>
           <div class="performance-list" data-performances aria-label="Upcoming and recent performances"></div>
@@ -139,10 +156,9 @@
         <div class="section-shell contact-panel reveal">
           <div>
             <p class="eyebrow">Booking</p>
-            <h2 id="contact-title">For concerts, listening rooms, and arts presenters.</h2>
+            <h2 id="contact-title">Bring Lightfoot's songs to your room.</h2>
             <p>
-              Send date, venue, location, expected audience size, and any
-              technical details already known.
+              Reach out to talk about a concert, benefit, or listening-room event.
             </p>
           </div>
           <div class="contact-actions">
@@ -166,10 +182,10 @@
       </div>
     </footer>
 
-    <script src="scripts/content/site-content.js?v=metadata-date"></script>
-    <script src="scripts/content/videos.js?v=metadata-date"></script>
-    <script src="scripts/content/musicians.js?v=metadata-date"></script>
-    <script src="scripts/content/performances.js?v=metadata-date"></script>
-    <script src="scripts/site.js?v=metadata-date"></script>
+    <script src="scripts/content/site-content.js?v=upcoming-brass"></script>
+    <script src="scripts/content/videos.js?v=upcoming-brass"></script>
+    <script src="scripts/content/musicians.js?v=upcoming-brass"></script>
+    <script src="scripts/content/performances.js?v=upcoming-brass"></script>
+    <script src="scripts/site.js?v=upcoming-brass"></script>
   </body>
 </html>
