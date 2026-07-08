@@ -73,6 +73,7 @@ const renderVideos = () => {
           data-title="${escapeHtml(video.title)}"
           data-vocalist="${escapeHtml(video.vocalist)}"
           data-venue="${escapeHtml(video.venue)}"
+          data-date="${escapeHtml(video.date)}"
           data-note="${escapeHtml(video.note)}"
           data-embed="${escapeHtml(video.embed)}"
           aria-pressed="${index === 0 ? "true" : "false"}"
@@ -80,7 +81,7 @@ const renderVideos = () => {
           <span class="performance-selector__thumb" aria-hidden="true"></span>
           <span>
             <strong>${escapeHtml(video.title)}</strong>
-            <small>${escapeHtml(video.label)}</small>
+            <small>${escapeHtml(video.date)}</small>
           </span>
         </button>
       `
@@ -270,18 +271,20 @@ const initFeaturedVideo = () => {
   const videoTitle = document.querySelector("[data-video-title]");
   const videoVocalist = document.querySelector("[data-video-vocalist]");
   const videoVenue = document.querySelector("[data-video-venue]");
+  const videoDate = document.querySelector("[data-video-date]");
   const videoOptions = document.querySelectorAll("[data-video-option]");
 
   const renderFeaturedVideo = (option) => {
-    if (!videoPlayer || !videoTitle || !videoVocalist || !videoVenue) {
+    if (!videoPlayer || !videoTitle || !videoVocalist || !videoVenue || !videoDate) {
       return;
     }
 
-    const { title, vocalist, venue, note, embed } = option.dataset;
+    const { title, vocalist, venue, date, note, embed } = option.dataset;
 
     videoTitle.textContent = title;
     videoVocalist.textContent = vocalist;
     videoVenue.textContent = venue;
+    videoDate.textContent = date;
 
     if (embed) {
       videoPlayer.innerHTML = `
@@ -289,7 +292,7 @@ const initFeaturedVideo = () => {
           src="${escapeHtml(embed)}"
           title="${escapeHtml(title)}"
           loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="autoplay; encrypted-media; picture-in-picture"
           allowfullscreen
         ></iframe>
       `;
