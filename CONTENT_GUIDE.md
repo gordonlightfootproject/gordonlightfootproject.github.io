@@ -27,7 +27,8 @@ src/content/site-content.js
 ```
 
 The site uses that value for homepage contact, EPK contact, and copy-email
-buttons.
+buttons. This is the only place the actual email address should appear in the
+project.
 
 ### Musicians
 
@@ -45,7 +46,6 @@ Each musician can have:
 - `bio`
 - `reflection`
 - `audio.title`
-- `audio.label`
 - `audio.embed`
 
 If a musician has no audio yet, leave off `audio.embed`; the site will show a

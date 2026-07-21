@@ -2,6 +2,11 @@ export const renderSiteSettings = ({ site }) => {
   const email = site?.bookingEmail;
 
   if (!email) {
+    document
+      .querySelectorAll("[data-booking-email], [data-booking-copy]")
+      .forEach((element) => {
+        element.hidden = true;
+      });
     return;
   }
 

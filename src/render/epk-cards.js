@@ -3,7 +3,7 @@ import { escapeHtml } from "../utils/escape-html.js";
 export const renderEpkCards = ({ site }) => {
   const target = document.querySelector("[data-epk-cards]");
   const cards = site?.epkCards;
-  const email = site?.bookingEmail || "booking@example.com";
+  const email = site?.bookingEmail;
 
   if (!target || !cards?.length) {
     return;
@@ -25,7 +25,7 @@ export const renderEpkCards = ({ site }) => {
           ${card.body ? `<p>${escapeHtml(card.body)}</p>` : ""}
           ${listItems ? `<ul class="plain-list">${listItems}</ul>` : ""}
           ${
-            card.contact
+            card.contact && email
               ? `<p><a href="mailto:${escapeHtml(email)}" data-booking-email>${escapeHtml(email)}</a></p>
                  <button class="copy-button copy-button--dark" type="button" data-copy="${escapeHtml(email)}" data-booking-copy aria-live="polite">
                    Copy email

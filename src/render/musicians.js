@@ -21,18 +21,18 @@ export const renderMusicians = ({ musicians }) => {
             decoding="async"
           >
           <div class="profile-card__body">
-            <p class="profile-card__role">${escapeHtml(musician.role)}</p>
-            <h3>${escapeHtml(musician.name)}</h3>
+            <h3 class="profile-card__name">${escapeHtml(musician.name)}</h3>
+            <div class="profile-card__role">${escapeHtml(musician.role)}</div>
             <p>${escapeHtml(musician.bio)}</p>
             <p class="reflection">
               <span>Musical connection</span>
               ${escapeHtml(musician.reflection)}
             </p>
-            <div class="audio-teaser${hasAudioEmbed ? "" : " audio-teaser--empty"}" aria-label="Featured audio placeholder">
+            <span class="audio-teaser__heading">Selected Song</span>
+            <div class="audio-teaser${hasAudioEmbed ? "" : " audio-teaser--empty"}" aria-label="Selected song">
               <span class="audio-teaser__icon" aria-hidden="true"></span>
               <div>
                 <strong>${escapeHtml(musician.audio?.title)}</strong>
-                <small>${escapeHtml(musician.audio?.label)}</small>
               </div>
               ${
                 hasAudioEmbed

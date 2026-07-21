@@ -17,7 +17,6 @@ export const musicians = [
       "I learned my first GL song, Sundown, 20 years ago and I've been a fan ever since.",
     audio: {
       title: "Sundown",
-      label: "SoundCloud stand-in",
       embed:
         "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/sundown&color=%23a76d3b&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
     }
@@ -32,7 +31,6 @@ export const musicians = [
       "Gordon's music had a strong influence on my early musical trajectory. His songs felt like poetry for people.",
     audio: {
       title: "If You Could Read My Mind",
-      label: "SoundCloud stand-in",
       embed:
         "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/if-you-could-read-my-mind-1&color=%23a76d3b&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
     }
@@ -45,10 +43,9 @@ export const musicians = [
       "A longtime aspiring session guitarist, Gary brings versatility and experience as a musician, recording studio owner, engineer, producer, and motion-picture technologist. Newly based in Chico, he performs with the local Latin group Los Caballitos and presents a solo jazz act. The GLP offers a new direction that he embraces for its artistic challenge and the band's shared musical love. He attended GIT's inaugural class in 1978, now Musicians Institute.",
     reflection: "Gordon's songs have had a profound impact on me over the years. Their beautiful melodies, unexpected rhythms, and distinctive structures create a rich emotional landscape that continues to inspire me.",
     audio: {
-      title: "Gotta Get Away",
-      label: "SoundCloud stand-in",
+      title: "Beautiful",
       embed:
-        "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/gordon-lightfoot-gotta-get&color=%23a76d3b&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
+        "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/beautiful&color=%23a76d3b&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
     }
   },
   {
@@ -61,7 +58,6 @@ export const musicians = [
       "My all-time favorite GL song is Anything For Love.",
     audio: {
       title: "Wreck of the Edmund Fitzgerald",
-      label: "SoundCloud stand-in",
       embed:
         "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/wreck-of-the-edmund&color=%23a76d3b&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
     }
@@ -76,7 +72,6 @@ export const musicians = [
       "I was introduced to GL through my best friend and was immediately impressed with the rich texture of his recordings.",
     audio: {
       title: "Carefree Highway",
-      label: "SoundCloud stand-in",
       embed:
         "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gordonlightfootofficial/carefree-highway&color=%23a76d3b&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
     }
@@ -90,8 +85,7 @@ export const musicians = [
     reflection:
       "It's such a pleasure to work with GL's material. I find such inspiration in his unique string harmonies.",
     audio: {
-      title: "Featured song to come",
-      label: "Audio stand-in pending"
+      title: "Featured song to come"
     }
   }
 ];

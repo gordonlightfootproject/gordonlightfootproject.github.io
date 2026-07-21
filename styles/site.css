@@ -770,9 +770,13 @@ h3 {
   color: var(--color-soft-ink);
 }
 
+.profile-card__name {
+  margin-bottom: 4px;
+}
+
 .profile-card__role {
-  margin-top: 0;
-  color: var(--color-sage);
+  margin: 0 0 8px;
+  color: var(--color-brass);
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -783,7 +787,8 @@ h3 {
   padding-top: 12px;
 }
 
-.reflection span {
+.reflection span,
+.audio-teaser__heading {
   display: block;
   margin-bottom: 4px;
   color: var(--color-brass);
@@ -792,12 +797,16 @@ h3 {
   text-transform: uppercase;
 }
 
+.audio-teaser__heading {
+  margin-top: 18px;
+}
+
 .audio-teaser {
   display: grid;
   grid-template-columns: 34px 1fr;
   gap: 10px;
   align-items: center;
-  margin-top: 18px;
+  margin-top: 0;
   border: 1px solid rgba(44, 40, 34, 0.12);
   border-radius: var(--radius);
   background: rgba(245, 240, 232, 0.72);

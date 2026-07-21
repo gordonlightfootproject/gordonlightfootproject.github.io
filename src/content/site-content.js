@@ -1,6 +1,5 @@
 export const site = {
-  // Replace this when the final booking address is known.
-  bookingEmail: "booking@example.com",
+  bookingEmail: "jmahoney1@mac.com",
   epkCards: [
     {
       eyebrow: "Short description",
