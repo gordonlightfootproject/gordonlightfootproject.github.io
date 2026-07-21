@@ -42,8 +42,8 @@ export const musicians = [
     role: "Voice, guitar",
     image: garyImage,
     bio:
-      "Gary is a guitarist and vocalist newly based in Chico, performing across a range of genres. A longtime aspiring session guitarist, he brings versatility and experience as a musician, recording studio owner, engineer, producer, and motion-picture technologist. He performs with the local Latin group Los Caballitos and presents a solo jazz act around Chico. The Gordon Lightfoot Project is a new direction—one Gary embraces for its artistic challenge and the band’s shared love of great songs. He attended GIT’s inaugural class in 1978, now Musicians Institute.",
-    reflection: "Gordon’s songs have had a profound impact on me over the years. Their beautiful melodies, unexpected rhythms, and distinctive structures create a rich emotional landscape that continues to inspire me.",
+      "A longtime aspiring session guitarist, Gary brings versatility and experience as a musician, recording studio owner, engineer, producer, and motion-picture technologist. Newly based in Chico, he performs with the local Latin group Los Caballitos and presents a solo jazz act. The GLP offers a new direction that he embraces for its artistic challenge and the band's shared musical love. He attended GIT's inaugural class in 1978, now Musicians Institute.",
+    reflection: "Gordon's songs have had a profound impact on me over the years. Their beautiful melodies, unexpected rhythms, and distinctive structures create a rich emotional landscape that continues to inspire me.",
     audio: {
       title: "Gotta Get Away",
       label: "SoundCloud stand-in",
