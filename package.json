@@ -1,5 +1,12 @@
 {
+  "name": "gordon-lightfoot-project",
+  "private": true,
   "scripts": {
-    "dev": "python3 -m http.server 4173"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.1.3"
   }
 }

@@ -1,10 +1,10 @@
 # Gordon Lightfoot Project Content Guide
 
-This site is plain static HTML/CSS/JS. Most editable text, links, bios, events,
-and technical details live in `scripts/content/`.
+This site is built with Vite and plain HTML/CSS/JS. Stable page prose lives in
+the HTML files; generated lists, links, bios, events, and technical details live
+in `src/content/`.
 
-You can preview casually by opening `index.html` in a browser. For a closer
-match to deployment, run:
+Run the local Vite server with:
 
 ```bash
 npm run dev
@@ -13,7 +13,7 @@ npm run dev
 Then open:
 
 ```text
-http://127.0.0.1:4173
+http://localhost:5173
 ```
 
 ## Where To Edit
@@ -23,7 +23,7 @@ http://127.0.0.1:4173
 Edit `bookingEmail` in:
 
 ```text
-scripts/content/site-content.js
+src/content/site-content.js
 ```
 
 The site uses that value for homepage contact, EPK contact, and copy-email
@@ -34,7 +34,7 @@ buttons.
 Edit musician names, roles, photos, bios, reflections, and audio links in:
 
 ```text
-scripts/content/musicians.js
+src/content/musicians.js
 ```
 
 Each musician can have:
@@ -56,39 +56,56 @@ quiet placeholder.
 Edit homepage video items in:
 
 ```text
-scripts/content/videos.js
+src/content/videos.js
 ```
 
-Current videos are Vimeo stand-ins. Replace `embed` values with final Vimeo or
-YouTube embed URLs when project footage is ready.
+Each video can include `title`, `vocalist`, `venue`, `date`, `note`, `embed`,
+and `poster`. The poster is the still image shown before the YouTube embed is
+loaded.
 
 ### Performances
 
-Edit upcoming, recent, and booking-oriented performance entries in:
+Edit upcoming and previous performance entries in:
 
 ```text
-scripts/content/performances.js
+src/content/performances.js
 ```
 
-Use `featured: true` for the booking-style highlighted entry.
+The site decides whether an entry is Upcoming or Previous by comparing its
+`date` to today's date. Events dated today still appear in Upcoming.
 
-### About And EPK
+### Authored Homepage Copy
 
-Edit the About section and EPK cards in:
+Edit stable homepage sections directly in:
 
 ```text
-scripts/content/site-content.js
+index.html
 ```
 
-The About image currently uses `assets/images/gordon.jpg`.
+This includes the hero copy, featured-video intro, About section, musician
+section intro, performances intro, and booking/contact prose.
+
+### EPK Cards
+
+Edit generated EPK cards in:
+
+```text
+src/content/site-content.js
+```
 
 ### Stage Plot
 
 Edit performer positions, baseline technical needs, and stage notes in:
 
 ```text
-scripts/content/stage-plot.js
+src/content/stage-plot.js
 ```
+
+### Rendered UI
+
+Generated sections are rendered from small modules in `src/render/`. Interactive
+behavior, such as reveal-on-scroll and copy-email buttons, lives in
+`src/behavior/`.
 
 ## Content Needed Before Final Launch
 
@@ -104,8 +121,8 @@ scripts/content/stage-plot.js
 
 ## Notes
 
-- Keep image paths relative to the project root, for example
-  `assets/images/tom.jpg`.
+- For generated musician cards, import image files at the top of
+  `src/content/musicians.js`, then use the imported variable in the record.
 - Keep copy concise; the site is designed to feel quiet and music-centered.
 - Avoid adding many simultaneous embeds. The homepage video section is designed
   around one focused video at a time.
