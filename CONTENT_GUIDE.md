@@ -32,7 +32,7 @@ project.
 
 ### Musicians
 
-Edit musician names, roles, photos, bios, reflections, and audio links in:
+Edit musician names, roles, photos, bios, and reflections in:
 
 ```text
 src/content/musicians.js
@@ -45,11 +45,6 @@ Each musician can have:
 - `image`
 - `bio`
 - `reflection`
-- `audio.title`
-- `audio.embed`
-
-If a musician has no audio yet, leave off `audio.embed`; the site will show a
-quiet placeholder.
 
 ### Featured Videos
 
@@ -59,9 +54,9 @@ Edit homepage video items in:
 src/content/videos.js
 ```
 
-Each video can include `title`, `vocalist`, `venue`, `date`, `note`, `embed`,
-and `poster`. The poster is the still image shown before the YouTube embed is
-loaded.
+Each video has a `title`, `vocalist`, `youtubeId`, and `session`. The shared
+session record holds the venue, date, and note. The site generates the YouTube
+embed and poster URLs from `youtubeId`.
 
 ### Performances
 

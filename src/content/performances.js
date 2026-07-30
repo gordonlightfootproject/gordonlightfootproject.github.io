@@ -1,12 +1,6 @@
 // Keep this list intentionally modest; it is not meant to become a full calendar.
 export const performances = [
   {
-    date: "September 12, 2026",
-    venue: "Sierra Nevada Big Room",
-    startTime: "7:30 PM",
-    note: "Placeholder upcoming concert listing for layout review."
-  },
-  {
     date: "June 10, 2026",
     venue: "The Music Connection",
     note:

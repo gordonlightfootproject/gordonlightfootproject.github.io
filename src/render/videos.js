@@ -1,5 +1,15 @@
 import { escapeHtml } from "../utils/escape-html.js";
 
+const getYouTubeEmbedUrl = (youtubeId) =>
+  youtubeId
+    ? `https://www.youtube.com/embed/${encodeURIComponent(youtubeId)}?rel=0&modestbranding=1`
+    : "";
+
+const getYouTubePosterUrl = (youtubeId) =>
+  youtubeId
+    ? `https://img.youtube.com/vi/${encodeURIComponent(youtubeId)}/maxresdefault.jpg`
+    : "";
+
 export const renderVideos = ({ videos }) => {
   const target = document.querySelector("[data-video-options]");
 
@@ -8,35 +18,38 @@ export const renderVideos = ({ videos }) => {
   }
 
   target.innerHTML = videos
-    .map(
-      (video, index) => `
+    .map((video, index) => {
+      const embed = getYouTubeEmbedUrl(video.youtubeId);
+      const poster = getYouTubePosterUrl(video.youtubeId);
+
+      return `
         <button
           class="performance-selector__item${index === 0 ? " is-active" : ""}"
           type="button"
           data-video-option
           data-title="${escapeHtml(video.title)}"
           data-vocalist="${escapeHtml(video.vocalist)}"
-          data-venue="${escapeHtml(video.venue)}"
-          data-date="${escapeHtml(video.date)}"
-          data-note="${escapeHtml(video.note)}"
-          data-embed="${escapeHtml(video.embed)}"
-          data-poster="${escapeHtml(video.poster)}"
+          data-venue="${escapeHtml(video.session?.venue)}"
+          data-date="${escapeHtml(video.session?.date)}"
+          data-note="${escapeHtml(video.session?.note)}"
+          data-embed="${escapeHtml(embed)}"
+          data-poster="${escapeHtml(poster)}"
           aria-pressed="${index === 0 ? "true" : "false"}"
         >
           <span class="performance-selector__thumb" aria-hidden="true">
             ${
-              video.poster
-                ? `<img src="${escapeHtml(video.poster)}" alt="" loading="lazy" decoding="async">`
+              poster
+                ? `<img src="${escapeHtml(poster)}" alt="" loading="lazy" decoding="async">`
                 : ""
             }
           </span>
           <span>
             <strong>${escapeHtml(video.title)}</strong>
-            <small>${escapeHtml(video.date)}</small>
+            <small>${escapeHtml(video.session?.date)}</small>
           </span>
         </button>
-      `
-    )
+      `;
+    })
     .join("");
 };
 
