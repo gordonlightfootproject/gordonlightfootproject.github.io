@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/gordon-lightfoot-project/",
+  base: "/",
   build: {
     rollupOptions: {
       input: {
